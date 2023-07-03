@@ -1,0 +1,32 @@
+﻿@model List<AppUser>
+@{
+    int count = 0;
+}
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <h1>Admins</h1>
+            <table>
+                <thead>
+                    <tr>
+                        <th scope="col">№</th>
+                        <th scope="col">Admin</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        count++;
+                        <tr>
+                            <th scope="row">@count</th>
+                            <td>@item.FullName</td>
+                            <td>@item.UserName</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
